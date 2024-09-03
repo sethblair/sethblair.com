@@ -1,0 +1,108 @@
+/* Box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Body basics */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFDCAB;
+    color: #333;
+    display: flex;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container setup */
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+/* Headers */
+header {
+    margin-bottom: 20px;
+    font-family: 'Roboto', serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Main styles */
+main {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+img.portrait {
+    max-width: 30%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+p {
+    font-weight: 300;
+    text-align: left;
+}
+
+.about-me {
+    margin: 20px 0px;
+}
+
+ul.links-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+ul.links-list li {
+    margin-bottom: 10px;
+}
+
+ul.links-list a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+ul.links-list a:hover {
+    color: #1d62db;
+}
+
+/* Footer styles */
+footer {
+    font-size: 0.9rem;
+    color: #777;
+}
