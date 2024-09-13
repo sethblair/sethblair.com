@@ -19,7 +19,7 @@ body {
     align-items: center;
 }
 
-/* Container setup */
+/* Container  */
 .container {
     text-align: center;
     display: flex;
@@ -48,10 +48,10 @@ h1 {
 }
 
 h2 {
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #2c3e50;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2e3842;
 }
 
 /* Main styles */
