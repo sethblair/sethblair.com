@@ -1,2 +1,2 @@
 # sethblair.com
-A simple website for me, Seth Blair
+A simple website for me, Seth Blair. 
