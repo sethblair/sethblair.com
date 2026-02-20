@@ -1,0 +1,100 @@
+@keyframes fadeInUp {
+    from {
+        opacity  : 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity  : 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity  : 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity  : 1;
+        transform: scale(1);
+    }
+}
+
+/* Social icon hover */
+@keyframes icon-pop {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    30% {
+        transform: scale(1.18) rotate(-6deg);
+    }
+
+    65% {
+        transform: scale(1.10) rotate(4deg);
+    }
+
+    100% {
+        transform: scale(1.08) rotate(0deg);
+    }
+}
+
+/* Profile avatar */
+.profile-avatar {
+    animation : scaleIn 0.6s ease-out 0.1s both;
+    transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+    transform: scale(1.08);
+}
+
+/* Bio card */
+.bio-card {
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+/* Social icons */
+.social-icon {
+    animation : fadeInUp 0.6s ease-out 0.4s both;
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.social-icon:hover {
+    animation: icon-pop 0.35s ease forwards;
+    filter   : brightness(1.1);
+}
+
+/* Resume button */
+.resume-button {
+    animation : fadeInUp 0.6s ease-out 0.5s both;
+    transition: box-shadow 0.25s ease-in-out, filter 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.resume-button:hover {
+    filter    : brightness(1.4);
+    box-shadow: 0 5px 14px rgba(242, 96, 118, 0.35);
+}
+
+/* Suppress entry re-animation after it has played once. */
+.social-icon.loaded:not(:hover) {
+    animation: none;
+}
+
+.resume-button.loaded {
+    animation: none;
+}
+
+/* Responsive: on mobile the action row spans full width (handled in React via
+   responsive `w` prop). Ensure the card padding breathes on small screens. */
+@media (max-width: 600px) {
+    .app-wrapper {
+        padding: 16px;
+    }
+
+    .bio-card {
+        padding: 20px !important;
+    }
+}
