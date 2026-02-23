@@ -23,8 +23,6 @@ const SOCIAL_LINKS = [
         href: 'mailto:me@sethblair.com',
         icon: IconMail,
         label: 'Email',
-        // Mantine 8: use the `color` prop with variant="light" — the component
-        // derives both background and icon tint from a single color token.
         color: 'blue',
     },
     {
@@ -50,8 +48,14 @@ const BIO_PARAGRAPHS = [
     "Outside of work, I'm usually in the garden, marveling at native plants, tracking which pollinators are visiting, and figuring out how to make my little patch of earth more hospitable to birds and beneficial insects. I love the slow process of cultivating something sustainable, thoughtful, and alive. It turns out building good software and building a healthy ecosystem have a lot in common!",
 ];
 
-
 const ACTION_ROW_HEIGHT = 38;
+
+/*
+ * Colour references that fall outside Mantine's prop system are expressed via
+ * the CSS custom properties defined in App.css
+ */
+const AVATAR_BORDER_STYLE = { border: '3px solid var(--color-accent)' };
+const CARD_BORDER_STYLE = { border: '1px solid var(--color-card-border)' };
 
 function App() {
     const handleEntryAnimationEnd = useCallback((e) => {
@@ -66,7 +70,7 @@ function App() {
             style={{ flexDirection: 'column' }}
             bg="orange.0"
         >
-            {/* Main Content */}
+            {/* ── Main Content ─────────────────────────────────────── */}
             <Box
                 flex={1}
                 display="flex"
@@ -84,7 +88,7 @@ function App() {
                                 size={120}
                                 radius={120}
                                 className="profile-avatar"
-                                style={{ border: '3px solid var(--mantine-color-rose-5)' }}
+                                style={AVATAR_BORDER_STYLE}
                                 alt="Seth Blair"
                             />
                             <Stack gap={8} align="center">
@@ -116,17 +120,19 @@ function App() {
                             p={32}
                             radius="lg"
                             bg="white"
-                            style={{ border: '1px solid var(--mantine-color-orange-2)' }}
+                            style={CARD_BORDER_STYLE}
                             className="bio-card"
                         >
                             <Stack gap={16}>
-                                {BIO_PARAGRAPHS.map((text, i) => (
+                                {BIO_PARAGRAPHS.map((text) => (
                                     <Text key={text.slice(0, 30)} size="sm" lh={1.6} c="dark.6">
                                         {text}
                                     </Text>
                                 ))}
                             </Stack>
                         </Paper>
+
+                        {/* Action Row */}
                         <Box w={{ base: '100%', xs: '60%', sm: '40%' }}>
                             <Stack gap={12}>
                                 <Group gap={12} justify="space-between" grow>

@@ -1,3 +1,15 @@
+/* 
+ * Global reset & base styles
+ */
+
+:root {
+    /* Neutral surface / text */
+    --color-bg  : oklch(0.9851 0.0001 263.28);
+    /* #fafafa */
+    --color-text: oklch(0.2178 0.0000 0);
+    /* #1a1a1a  (achromatic) */
+}
+
 * {
     margin    : 0;
     padding   : 0;
@@ -10,14 +22,13 @@ body {
         sans-serif;
     -webkit-font-smoothing : antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background             : #fafafa;
-    color                  : #1a1a1a;
+    background             : var(--color-bg);
+    color                  : var(--color-text);
     min-height             : 100vh;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 html,
